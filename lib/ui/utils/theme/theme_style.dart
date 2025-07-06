@@ -27,9 +27,9 @@ class ThemeStyle {
         onSurface: Color(0xFFE0E0E0),
       ),
       textTheme: TextTheme(
-        headlineSmall: TextStyle(color: Color(0xFFE0E0E0), fontWeight: FontWeight.bold),
-        bodyMedium: TextStyle(color: Color(0xFFE0E0E0)),
-        labelLarge: TextStyle(color: Color(0xFF03DAC6)),
+        headlineSmall: TextStyle(fontFamily:TextStyles.fontFamily,color: Color(0xFFE0E0E0), fontWeight: FontWeight.bold),
+        bodyMedium: TextStyle(fontFamily:TextStyles.fontFamily,color: Color(0xFFE0E0E0)),
+        labelLarge: TextStyle(fontFamily:TextStyles.fontFamily,color: Color(0xFF03DAC6)),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(

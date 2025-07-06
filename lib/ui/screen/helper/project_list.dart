@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_flutter_portfolio/framework/controller/portfolio_controller/portfolio_controller.dart';
+import 'package:my_flutter_portfolio/ui/screen/helper/project_detail_dialog.dart' show ProjectDetailDialog;
 import 'package:my_flutter_portfolio/ui/utils/theme/app_colors.dart';
 import 'package:my_flutter_portfolio/ui/utils/widgets/common_cache_image.dart';
 
@@ -34,7 +36,13 @@ class ProjectList extends ConsumerWidget {
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0))),
                   ),
-                  onPressed: (){},
+                  onPressed: (){
+                    showDialog(
+                      context: context,
+                      builder: (context) => ProjectDetailDialog(index: index,),
+                    );
+
+                  },
                   child: Text(
                 'About Project',
                 style: TextStyle(color:AppColors.white),
@@ -66,7 +74,7 @@ class ProjectList extends ConsumerWidget {
         );
       },
       separatorBuilder: (BuildContext context, int index) {
-        return SizedBox(height: 30);
+        return SizedBox(height: 10.h);
       },
     );
   }

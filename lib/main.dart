@@ -8,6 +8,7 @@ import 'package:my_flutter_portfolio/ui/routing/delegate.dart' show MainRouterDe
 import 'package:my_flutter_portfolio/ui/routing/parser.dart' show MainRouterInformationParser;
 import 'package:my_flutter_portfolio/ui/routing/stack.dart' show navigationStackController;
 import 'ui/utils/theme/theme_style.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 
 void main() async{
@@ -22,7 +23,9 @@ void main() async{
   /// Setup for the hive 
   await Hive.initFlutter();
   await Hive.openBox('userBox');
-
+  // Here we set the URL strategy for our web app.
+  // It is safe to call this function when running on mobile or desktop as well.
+usePathUrlStrategy();
   runApp( ProviderScope(child: MyApp()));
 }
 
