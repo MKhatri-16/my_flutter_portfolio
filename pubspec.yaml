@@ -62,6 +62,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   responsive_builder: ^0.7.1
 
+
   #Network
   dio: ^5.8.0+1
   flutter_offline: ^4.0.0

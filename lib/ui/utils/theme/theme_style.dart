@@ -7,45 +7,46 @@ class ThemeStyle {
 
   static ThemeData themeData(bool isDarkTheme, BuildContext context) {
     return ThemeData(
-      fontFamily: TextStyles.fontFamily,
-      primaryColor: AppColors.primary,
-      scaffoldBackgroundColor: AppColors.scaffoldBGByTheme(),
-
-      hintColor: AppColors.grey6B6B6B,
-      primarySwatch: AppColors.colorPrimary,
-      textTheme: Theme.of(context).textTheme.apply(
-        bodyColor: AppColors.textByTheme(),
-      ),
-      splashColor: AppColors.transparent,//To disable ripple effect
-
-      highlightColor: AppColors.transparent,//To disable ripple effect
-
-      // buttonTheme: Theme.of(context).buttonTheme.copyWith(colorScheme: isDarkTheme ?
-      // ColorScheme.dark(
-      //   background: Constant().clrPrimary,
-      // ) : ColorScheme.light(
-      //     background: Constant().clrPrimary
-      // )),
-
-      // indicatorColor: isDarkTheme ? Color(0xff0E1D36) : Colors.white,
-      // buttonColor: isDarkTheme ? Color(0xff3B3B3B) : Colors.white,
-      //
-      // hintColor: isDarkTheme ? Color(0xff280C0B) : Color(0xffEECED3),
-      //
-      // highlightColor: isDarkTheme ? Color(0xff372901) : Color(0xffFCE192),
-      // hoverColor: isDarkTheme ? Color(0xff3A3A3B) : Color(0xff4285F4),
-      //
-      // focusColor: isDarkTheme ? Color(0xff0B2512) : Color(0xffA8DAB5),
-      // disabledColor: Colors.grey,
-      // textSelectionColor: isDarkTheme ? Colors.white : Colors.black,
-      // cardColor: isDarkTheme ? Color(0xFF151515) : Colors.white,
-      // canvasColor: isDarkTheme ? Colors.black : Colors.grey[50],
-      // brightness: isDarkTheme ? Brightness.dark : Brightness.light,
-      // buttonTheme: Theme.of(context).buttonTheme.copyWith(colorScheme: isDarkTheme ? ColorScheme.dark() : ColorScheme.light()),
+      fontFamily:"Helvetica_Neue",
+      brightness: Brightness.dark,
+      primaryColor: Color(0xFF121212),
+      scaffoldBackgroundColor: Color(0xFF121212),
       appBarTheme: AppBarTheme(
-        elevation: 0.0,
-        backgroundColor: AppColors.scaffoldBGByTheme(),
-      ), colorScheme: ColorScheme.fromSwatch(primarySwatch: AppColors.colorPrimary).copyWith(background: AppColors.scaffoldBGByTheme()),
+        backgroundColor: Color(0xFF1F1F1F),
+        foregroundColor: Colors.white,
+        elevation: 0,
+      ),
+      colorScheme: ColorScheme.dark(
+        primary: Color(0xFF121212),
+        secondary: Color(0xFF1F1F1F),
+        background: Color(0xFF121212),
+        surface: Color(0xFF1F1F1F),
+        onPrimary: Colors.white,
+        onSecondary: Colors.white,
+        onBackground: Color(0xFFE0E0E0),
+        onSurface: Color(0xFFE0E0E0),
+      ),
+      textTheme: TextTheme(
+        headlineSmall: TextStyle(color: Color(0xFFE0E0E0), fontWeight: FontWeight.bold),
+        bodyMedium: TextStyle(color: Color(0xFFE0E0E0)),
+        labelLarge: TextStyle(color: Color(0xFF03DAC6)),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Color(0xFF00BCD4),
+          foregroundColor: Colors.black,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+      ),
+      /*cardTheme: CardTheme(
+        color: Color(0xFF1F1F1F),
+        elevation: 4,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
+      ),*/
     );
 
   }
