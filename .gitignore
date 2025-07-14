@@ -43,3 +43,10 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+lib/ui/utils/theme/fonts.gen.dart
+lib/ui/utils/theme/assets.gen.dart
+lib/ui/routing/navigation_stack_item.freezed.dart
+lib/ui/routing/navigation_stack_item.freezed.dart
+lib/framework/dependency_injection/inject.config.dart
+lib/framework/dependency_injection/inject.config.dart
+lib/ui/routing/navigation_stack_item.freezed.dart

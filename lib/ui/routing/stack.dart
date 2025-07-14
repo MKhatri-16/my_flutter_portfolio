@@ -8,7 +8,7 @@ import 'package:my_flutter_portfolio/ui/utils/const/app_constants.dart';
 
 
 final navigationStackController = ChangeNotifierProvider((ref) => NavigationStack([
-  const NavigationStackItem.splash(),
+  const NavigationStackItem.portfolio(),
 ]));
 
 

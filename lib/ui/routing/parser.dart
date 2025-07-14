@@ -38,20 +38,20 @@ class MainRouterInformationParser extends RouteInformationParser<NavigationStack
       final key = uri.pathSegments[i];
 
       switch (key) {
-        case Keys.splash:
-          items.add(const NavigationStackItem.splash());
+        case Keys.portfolio:
+          items.add(const NavigationStackItem.portfolio());
             break;
 
         default:
-          items.add(const NavigationStackItem.splash());
+          items.add(const NavigationStackItem.portfolio());
         // default:
         //   items.add(const NavigationStackItem.notFound());
       }
     }
     showLog("Items >> ${items.toList().toString()}");
     if (items.isEmpty) {
-      const fallback = NavigationStackItem.splash(); //NavigationStackItem.customerInfo();
-      if (items.isNotEmpty && items.first is NavigationStackItemSplashPage) {
+      const fallback = NavigationStackItem.portfolio(); //NavigationStackItem.customerInfo();
+      if (items.isNotEmpty && items.first is NavigationStackItemPortfolio) {
         items[0] = fallback;
       } else {
         items.insert(0, fallback);
@@ -66,7 +66,7 @@ class MainRouterInformationParser extends RouteInformationParser<NavigationStack
     final location = configuration.items.fold<String>('', (previousValue, element) {
       return previousValue +
           element.when(
-            splash: () => '/${Keys.splash}',
+            portfolio: () => '/${Keys.portfolio}',
           );
     });
 

@@ -55,7 +55,7 @@ class MainRouterDelegate extends RouterDelegate<NavigationStack> with ChangeNoti
 
   List<Page> _pages(WidgetRef ref) => stack.items
       .mapIndexed((e, i) => e.when(
-            splash: () => const MaterialPage(child: Portfolio(), key: ValueKey(Keys.splash)),
+            portfolio: () => const MaterialPage(child: Portfolio(), key: ValueKey(Keys.portfolio)),
           ))
       .toList();
 
