@@ -4,7 +4,6 @@ import 'package:injectable/injectable.dart';
 import 'package:my_flutter_portfolio/ui/routing/navigation_stack_keys.dart';
 import 'package:my_flutter_portfolio/ui/routing/stack.dart' show NavigationStack;
 import 'package:my_flutter_portfolio/ui/screen/portfolio.dart';
-import 'package:my_flutter_portfolio/ui/screen/splash.dart';
 
 final globalNavigatorKey = GlobalKey<NavigatorState>();
 
@@ -55,7 +54,7 @@ class MainRouterDelegate extends RouterDelegate<NavigationStack> with ChangeNoti
 
   List<Page> _pages(WidgetRef ref) => stack.items
       .mapIndexed((e, i) => e.when(
-            portfolio: () => const MaterialPage(child: Portfolio(), key: ValueKey(Keys.portfolio)),
+    portfolio: () => const MaterialPage(child: Portfolio(), key: ValueKey(Keys.portfolio)),
           ))
       .toList();
 
