@@ -1,3 +1,3 @@
 abstract class Keys {
-  static const splash = 'splash';
+  static const portfolio = 'portfolio';
 }

@@ -18,33 +18,33 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$NavigationStackItem {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() splash,
+    required TResult Function() portfolio,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? splash,
+    TResult? Function()? portfolio,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? splash,
+    TResult Function()? portfolio,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NavigationStackItemSplashPage value) splash,
+    required TResult Function(NavigationStackItemPortfolio value) portfolio,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NavigationStackItemSplashPage value)? splash,
+    TResult? Function(NavigationStackItemPortfolio value)? portfolio,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NavigationStackItemSplashPage value)? splash,
+    TResult Function(NavigationStackItemPortfolio value)? portfolio,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,40 +69,40 @@ class _$NavigationStackItemCopyWithImpl<$Res, $Val extends NavigationStackItem>
 }
 
 /// @nodoc
-abstract class _$$NavigationStackItemSplashPageImplCopyWith<$Res> {
-  factory _$$NavigationStackItemSplashPageImplCopyWith(
-          _$NavigationStackItemSplashPageImpl value,
-          $Res Function(_$NavigationStackItemSplashPageImpl) then) =
-      __$$NavigationStackItemSplashPageImplCopyWithImpl<$Res>;
+abstract class _$$NavigationStackItemPortfolioImplCopyWith<$Res> {
+  factory _$$NavigationStackItemPortfolioImplCopyWith(
+          _$NavigationStackItemPortfolioImpl value,
+          $Res Function(_$NavigationStackItemPortfolioImpl) then) =
+      __$$NavigationStackItemPortfolioImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$NavigationStackItemSplashPageImplCopyWithImpl<$Res>
+class __$$NavigationStackItemPortfolioImplCopyWithImpl<$Res>
     extends _$NavigationStackItemCopyWithImpl<$Res,
-        _$NavigationStackItemSplashPageImpl>
-    implements _$$NavigationStackItemSplashPageImplCopyWith<$Res> {
-  __$$NavigationStackItemSplashPageImplCopyWithImpl(
-      _$NavigationStackItemSplashPageImpl _value,
-      $Res Function(_$NavigationStackItemSplashPageImpl) _then)
+        _$NavigationStackItemPortfolioImpl>
+    implements _$$NavigationStackItemPortfolioImplCopyWith<$Res> {
+  __$$NavigationStackItemPortfolioImplCopyWithImpl(
+      _$NavigationStackItemPortfolioImpl _value,
+      $Res Function(_$NavigationStackItemPortfolioImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$NavigationStackItemSplashPageImpl
-    implements NavigationStackItemSplashPage {
-  const _$NavigationStackItemSplashPageImpl();
+class _$NavigationStackItemPortfolioImpl
+    implements NavigationStackItemPortfolio {
+  const _$NavigationStackItemPortfolioImpl();
 
   @override
   String toString() {
-    return 'NavigationStackItem.splash()';
+    return 'NavigationStackItem.portfolio()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$NavigationStackItemSplashPageImpl);
+            other is _$NavigationStackItemPortfolioImpl);
   }
 
   @override
@@ -111,27 +111,27 @@ class _$NavigationStackItemSplashPageImpl
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() splash,
+    required TResult Function() portfolio,
   }) {
-    return splash();
+    return portfolio();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? splash,
+    TResult? Function()? portfolio,
   }) {
-    return splash?.call();
+    return portfolio?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? splash,
+    TResult Function()? portfolio,
     required TResult orElse(),
   }) {
-    if (splash != null) {
-      return splash();
+    if (portfolio != null) {
+      return portfolio();
     }
     return orElse();
   }
@@ -139,33 +139,33 @@ class _$NavigationStackItemSplashPageImpl
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(NavigationStackItemSplashPage value) splash,
+    required TResult Function(NavigationStackItemPortfolio value) portfolio,
   }) {
-    return splash(this);
+    return portfolio(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(NavigationStackItemSplashPage value)? splash,
+    TResult? Function(NavigationStackItemPortfolio value)? portfolio,
   }) {
-    return splash?.call(this);
+    return portfolio?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(NavigationStackItemSplashPage value)? splash,
+    TResult Function(NavigationStackItemPortfolio value)? portfolio,
     required TResult orElse(),
   }) {
-    if (splash != null) {
-      return splash(this);
+    if (portfolio != null) {
+      return portfolio(this);
     }
     return orElse();
   }
 }
 
-abstract class NavigationStackItemSplashPage implements NavigationStackItem {
-  const factory NavigationStackItemSplashPage() =
-      _$NavigationStackItemSplashPageImpl;
+abstract class NavigationStackItemPortfolio implements NavigationStackItem {
+  const factory NavigationStackItemPortfolio() =
+      _$NavigationStackItemPortfolioImpl;
 }
