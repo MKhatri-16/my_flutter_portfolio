@@ -57,20 +57,22 @@ class PortfolioWeb extends ConsumerWidget {
                     flex: 4,
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("👋 Who I Am",
                             style: Theme.of(context).textTheme.headlineSmall),
                         const SizedBox(height: 10),
                         Text(
-                          "Hey there! I'm Muskan — a Flutter artisan crafting pixel-perfect, high-performance mobile experiences. Whether it’s sleek interfaces or seamless backend integration, I turn abstract ideas into stunning, scalable applications.",
+                          "Flutter & Android Developer Experienced in building responsive Flutter MOBILE & WEB applications with a focus on creating user- friendly designs and smooth functionality. Proficient in working with MVVM and DDD architectures, I ensure applications are well- structured, maintainable, and scalable. I’m passionate about crafting practical solutions that meet both user needs and project goals.",
                           style: Theme.of(context).textTheme.bodyMedium,
+                          maxLines : 4
                         ),
                       ],
                     ),
                   ),
                   Spacer(),
-                  Image.asset("assets/images/muskan-removebg-preview.png"),
-                  Spacer(),
+                  // Image.asset("assets/images/muskan-removebg-preview.png"),
+                  // Spacer(),
                 ],
               ),
 
@@ -83,21 +85,33 @@ class PortfolioWeb extends ConsumerWidget {
               const SizedBox(height: 30),
 
               // 🛠️ Tech Arsenal
-              SectionTitle(title: "🛠️ Tech Arsenal",key: portfolioWatch.skillsKey,),
+              SectionTitle(title: "🛠️ Skills",key: portfolioWatch.skillsKey,),
               Wrap(
                 spacing: 10,
                 runSpacing: 10,
                 children: const [
                   SkillChip(label: "Flutter & Dart"),
-                  SkillChip(label: "Firebase Suite"),
-                  SkillChip(label: "RESTful Integrations"),
-                  SkillChip(label: "State Management (Riverpod)"),
-                  SkillChip(label: "Version Control (GitHub)"),
+                  SkillChip(label: "Flutter Web"),
+                  SkillChip(label: "Flutter Desktop"),
+                  SkillChip(label: "State Management (Riverpod,Bloc)"),
                   SkillChip(label: "Socket.Io"),
-                  SkillChip(label: "Nearby Connections Google API"),
-                  SkillChip(label: "Wireframing (Figma)"),
-                  SkillChip(label: "Clean Architecture"),
-                  SkillChip(label: "Micro-animations"),
+                  SkillChip(label: "Responsive Design"),
+                  SkillChip(label: "Custom Animations"),
+                  SkillChip(label: "MVVM Architectures"),
+                  SkillChip(label: "Firebase"),
+                  SkillChip(label: "Git/Github"),
+                  SkillChip(label: "Postman"),
+                  SkillChip(label: "Socket.io"),
+                  SkillChip(label: "Platform Channels"),
+                  SkillChip(label: "Third Party SDKs"),
+                  SkillChip(label: "BLE & Nearby Share"),
+                  SkillChip(label: "Java"),
+                  SkillChip(label: "Kotlin"),
+                  SkillChip(label: "SQL"),
+                  SkillChip(label: "Python"),
+                  SkillChip(label: "HTML"),
+                  SkillChip(label: "CSS"),
+                  SkillChip(label: "JavaScript"),
                 ],
               ),
 
@@ -107,9 +121,9 @@ class PortfolioWeb extends ConsumerWidget {
               SectionTitle(title: "📬 Let’s Connect",key: portfolioWatch.contactKey,),
               ContactInfo(
                   icon: Icons.email,
-                  text: "Let’s build something together → muskankhatri1612@gmail.com"),
+                  text: "Let’s build something together → uveshmenpur.03@gmail.com"),
               ContactInfo(
-                  icon: Icons.link, text: "Code playground → github.com/MKhatri-16"),
+                  icon: Icons.link, text: "Code playground → github.com/uveshm003"),
               // ContactInfo(icon: Icons.phone, text: "Ping me → +91 96019 95550"),
 
               const SizedBox(height: 40),
