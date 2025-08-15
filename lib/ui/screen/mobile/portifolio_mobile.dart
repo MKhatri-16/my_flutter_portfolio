@@ -5,6 +5,8 @@ import 'package:my_flutter_portfolio/framework/controller/portfolio_controller/p
 import 'package:my_flutter_portfolio/ui/screen/helper/portfolio_list_mobile.dart';
 import 'package:my_flutter_portfolio/ui/screen/helper/project_list.dart';
 
+import '../helper/work_experience_mobile.dart';
+
 class PortfolioMobile extends ConsumerWidget {
   const PortfolioMobile({super.key});
   @override
@@ -44,6 +46,9 @@ class PortfolioMobile extends ConsumerWidget {
                    SizedBox(height: 20.h),
                 ],
               ),
+              const SizedBox(height: 30),
+              SectionTitle(title: "💼 Work Experience", key: portfolioWatch.workExperienceKey),
+              WorkExperienceSection(),
               const SizedBox(height: 30),
               SectionTitle(title: "🚀 Projects", key: portfolioWatch.projectKey),
               ProjectListMobile(),

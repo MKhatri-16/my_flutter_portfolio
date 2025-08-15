@@ -3,6 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:my_flutter_portfolio/framework/controller/portfolio_controller/portfolio_controller.dart';
 import 'package:my_flutter_portfolio/ui/screen/helper/project_list.dart';
 
+import '../helper/workexperience_web.dart';
+
 class PortfolioWeb extends ConsumerWidget {
   const PortfolioWeb({super.key});
   @override
@@ -22,11 +24,14 @@ class PortfolioWeb extends ConsumerWidget {
           NavItem(title: "Home", onTap: () {
             portfolioWatch.scrollToSection(portfolioWatch.homeKey);
           },),
-          NavItem(title: "Projects", onTap: () {
+          NavItem(title: "Work Experience", onTap: () {
+            /// Gets scroll to the projects
+            portfolioWatch.scrollToSection(portfolioWatch.workExperienceKey);
+          },),NavItem(title: "Projects", onTap: () {
             /// Gets scroll to the projects
             portfolioWatch.scrollToSection(portfolioWatch.projectKey);
           },),
-          NavItem(title: "Tech Arsenal", onTap: () {
+          NavItem(title: "Skills", onTap: () {
             /// Gets scroll to the skills
             portfolioWatch.scrollToSection(portfolioWatch.skillsKey); },),
           NavItem(title: "Let’s Connect", onTap: () {
@@ -75,6 +80,16 @@ class PortfolioWeb extends ConsumerWidget {
                   // Spacer(),
                 ],
               ),
+
+              const SizedBox(height: 30),
+
+
+              // 💼 Work Experience
+              SectionTitle(
+                  title: "💼 Work Experience",
+                  key: portfolioWatch.workExperienceKey),
+
+              WorkExperienceSection(),
 
               const SizedBox(height: 30),
 

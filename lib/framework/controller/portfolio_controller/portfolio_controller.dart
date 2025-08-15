@@ -11,6 +11,7 @@ class PortfolioController extends ChangeNotifier{
   final skillsKey = GlobalKey();
   final contactKey = GlobalKey();
   final homeKey = GlobalKey();
+  final workExperienceKey = GlobalKey();
 
   /// Function to use scrolling to particular section
   void scrollToSection(GlobalKey key) {
@@ -74,6 +75,52 @@ class PortfolioController extends ChangeNotifier{
       ],
     ),
   ];
+
+  /// List of the work Experience
+  final workExperienceList = <WorkExperience>[
+    WorkExperience(
+        companyName: 'Kaymatech',
+        role: 'Flutter Developer',
+        location: 'Ahmedabad',
+        period: '01/2025 - Present',
+        companyDetail: [
+          "Product Based Company, worked on around 12-15 applications for Android, iOS, MacOS, Windows.",
+          "Created new products & implemented new features in existing products.",
+          "Set up complete In-App Purchase structure in Windows, opening a new revenue stream.",
+          "Suggested & implemented architectural changes for faster processes.",
+        ]),
+    WorkExperience(
+        companyName: 'Kody Technolabs Limited',
+        role: 'Junior Mobile Consultant',
+        location: 'Ahmedabad',
+        period: '09/2023 - 01/2025',
+        companyDetail: [
+          "Worked on in-house projects Dasher & Odigo.",
+          "Integrated ROS SDK, BLE & Nearby Services API in Android Native.",
+          "Worked with packages/plugins such as objectBox, flutter downloader, pointycastle, kioskmode, flutter_azure_tts, and more.",
+          "Implemented solutions like Dynamic Forms, Web Route Management, Encryption-Decryption of APIs.",
+        ]),
+    WorkExperience(
+        companyName: 'Kody Technolabs Limited',
+        role: 'Mobile Developer Intern',
+        location: 'Ahmedabad',
+        period: '06/2023 - 09/2023',
+        companyDetail: [
+          "Worked on Soccer Card Trading & Restaurant Reservation applications.",
+          "Handled UI design & API integration.",
+          "Worked on MVVM + DDD Architecture with plugins like Dio, Riverpod, GetIt, Hive, SQFLite, SocketIO, and more.",
+        ]),
+    WorkExperience(
+        companyName: 'Iconflux Technologies',
+        role: 'Flutter Developer Intern',
+        location: 'Ahmedabad',
+        period: '03/2023 - 06/2023',
+        companyDetail: [
+          "Built competitive exam preparation app for government exams.",
+          "Implemented features for study materials, mock tests, and performance tracking.",
+          "Created a user-friendly platform for enhanced learning and assessment.",
+        ])
+  ];
   /// Function to add value into the project list
   void addValueProjectList (Project project)
   {
@@ -89,4 +136,14 @@ class Project
   final List<String> projectDetail;
   final List<String> projectImage;
   Project({required this.projectName,required this.projectDetail, required this.projectDescription, required this.projectImage});
+}
+
+class WorkExperience
+{
+  final String companyName;
+  final String role;
+  final String location;
+  final String period;
+  final List<String> companyDetail;
+  WorkExperience({required this.companyName,required this.role,required this.location,required this.period,required this.companyDetail,});
 }
